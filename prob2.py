@@ -1,12 +1,16 @@
+#Kindly copy and paste the lines below one-by-one in order to avoid problems in displaying the outputs.
 import pandas as pd
-df = pd.read_csv('cars.csv')
+cars = pd.read_csv('cars.csv')
 # a)
-df.loc[[1,3,5,7,9]]
+soln_a = cars.loc[[1,3,5,7,9]]
+print(soln_a)
 # b)
-df[(df['Model']=='Mazda RX4')]
+soln_b = cars[(cars['Model']=='Mazda RX4')]
+print(soln_b)
 # c)
-df.loc[[23],['cyl']]
+soln_c = cars.loc[[23],['cyl']]
+print(soln_c)
 # d)
-df.loc[df['Model'] == 'Mazda RX4 Wag', ['cyl', 'gear']]
-df.loc[df['Model'] == 'Ford Pantera L', ['cyl', 'gear']]
-df.loc[df['Model'] == 'Honda Civic', ['cyl', 'gear']]
+cars.loc[cars['Model'] == 'Mazda RX4 Wag', ['cyl', 'gear']]
+cars.loc[cars['Model'] == 'Ford Pantera L', ['cyl', 'gear']]
+cars.loc[cars['Model'] == 'Honda Civic', ['cyl', 'gear']]
